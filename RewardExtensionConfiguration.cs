@@ -9,11 +9,11 @@ namespace a4834833.RewardExtension
     public class RewardExtensionConfiguration : IRocketPluginConfiguration
     {
         public uint? XP = null;
-        public decimal RewardAmount;
+        public decimal Money;
         public void LoadDefaults()
         {
             XP = 190;
-            RewardAmount = 30;
+            Money = 30;
         }
     }
 }
