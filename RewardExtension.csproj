@@ -7,8 +7,8 @@
     <ProjectGuid>{2286E408-844E-40DF-AA53-D6F2E06578F5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>a4834833.VotifierXP</RootNamespace>
-    <AssemblyName>VotifierXP</AssemblyName>
+    <RootNamespace>a4834833.RewardExtension</RootNamespace>
+    <AssemblyName>RewardExtension</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,7 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\Rocket.Unturned_928 (1)\Assembly-CSharp.dll</HintPath>
+      <HintPath>..\..\..\Desktop\Rocket.Unturned_928 (1)\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp-firstpass">
       <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Unturned\Unturned_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
@@ -50,13 +50,13 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Rocket.API">
-      <HintPath>..\..\Rocket.Unturned_928 (1)\Rocket.API.dll</HintPath>
+      <HintPath>..\..\..\Desktop\Rocket.Unturned_928 (1)\Rocket.API.dll</HintPath>
     </Reference>
     <Reference Include="Rocket.Core">
-      <HintPath>..\..\Rocket.Unturned_928 (1)\Rocket.Core.dll</HintPath>
+      <HintPath>..\..\..\Desktop\Rocket.Unturned_928 (1)\Rocket.Core.dll</HintPath>
     </Reference>
     <Reference Include="Rocket.Unturned">
-      <HintPath>..\..\Rocket.Unturned_928 (1)\Rocket.Unturned.dll</HintPath>
+      <HintPath>..\..\..\Desktop\Rocket.Unturned_928 (1)\Rocket.Unturned.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -64,11 +64,14 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="Uconomy">
+      <HintPath>..\..\..\Desktop\Uconomy (3)\Uconomy.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine">
       <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Unturned\Unturned_Data\Managed\UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="Votifier">
-      <HintPath>..\..\Votifier (2)\Votifier.dll</HintPath>
+      <HintPath>..\..\..\Desktop\Votifier (2)\Votifier.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
