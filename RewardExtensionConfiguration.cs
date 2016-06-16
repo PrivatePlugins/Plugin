@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace a4834833.RewardExtension
+namespace fr34kyn01535.RewardExtension
 {
     public class RewardExtensionConfiguration : IRocketPluginConfiguration
     {

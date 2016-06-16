@@ -70,18 +70,15 @@
     <Reference Include="UnityEngine">
       <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Unturned\Unturned_Data\Managed\UnityEngine.dll</HintPath>
     </Reference>
-    <Reference Include="Votifier">
-      <HintPath>..\..\..\Desktop\Votifier (2)\Votifier.dll</HintPath>
+    <Reference Include="Votifier, Version=1.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Desktop\Votifier (3)\Votifier.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="RewardExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RewardExtensionConfiguration.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Analyzer Include="..\..\..\..\..\Program Files %28x86%29\Steam\steamapps\common\Unturned\Unturned_Data\Managed\Assembly-CSharp-firstpass.dll" />
-    <Analyzer Include="..\..\..\..\..\Program Files %28x86%29\Steam\steamapps\common\Unturned\Unturned_Data\Managed\UnityEngine.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
