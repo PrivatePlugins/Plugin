@@ -64,7 +64,8 @@ namespace fr34kyn01535.RewardExtension
                 Logger.Log(player.DisplayName + " has received " + XPReceived + " because he voted on " + definition.Name);
             }
             {
-
+                  RewardExtension.ExecuteDependencyCode("Uconomy", (IRocketPlugin plugin) =>
+                 
                 {
 
                     string moneyReceived = Configuration.Instance.Money + Uconomy.Uconomy.Instance.Configuration.Instance.MoneyName;
