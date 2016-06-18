@@ -41,7 +41,6 @@ namespace fr34kyn01535.RewardExtension
                 return new TranslationList()
                 {
                     { "votifierxp_player_has_voted","Thanks for voting on {0}, you have received {1}" } ,
-                        { "votifierxp_creator"," XP / Money Option By http://goo.gl/cz32QX " } ,
                        { "votifierxpuconomy_player_has_voted","Thanks for voting on {0}, you have received {1} and now have {2} in your balance." }
 
 
@@ -63,8 +62,6 @@ namespace fr34kyn01535.RewardExtension
 
                 UnturnedChat.Say(player, Instance.Translations.Instance.Translate("votifierxp_player_has_voted", definition.Name, XPReceived));
                 Logger.Log(player.DisplayName + " has received " + XPReceived + " because he voted on " + definition.Name);
-                UnturnedChat.Say(player, Instance.Translations.Instance.Translate("votifierxp_creator"));
-                Logger.Log("XP / Money Option By http://goo.gl/cz32QX");
             }
             {
 
