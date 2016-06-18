@@ -65,7 +65,6 @@ namespace fr34kyn01535.RewardExtension
             }
             {
 
-                RewardExtension.ExecuteDependencyCode("Uconomy", (IRocketPlugin plugin) =>
                 {
 
                     string moneyReceived = Configuration.Instance.Money + Uconomy.Uconomy.Instance.Configuration.Instance.MoneyName;
