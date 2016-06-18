@@ -13,7 +13,7 @@ namespace fr34kyn01535.RewardExtension
         public void LoadDefaults()
         {
             XP = 190;
-            Money = 30;
+            Money = 0;
         }
     }
 }
