@@ -1,4 +1,4 @@
-﻿using Rocket.Core.Logging;
+using Rocket.Core.Logging;
 using Rocket.Core.Plugins;
 using Rocket.Unturned.Chat;
 using Rocket.Unturned.Player;
@@ -15,7 +15,8 @@ namespace fr34kyn01535.RewardExtension
 
     public class RewardExtension : RocketPlugin<RewardExtensionConfiguration>
     {
-        public static RewardExtension Instance = null;
+        public static RewardExtension Instance;
+
         protected override void Load()
         {
             Instance = this;
@@ -32,7 +33,10 @@ namespace fr34kyn01535.RewardExtension
 
 
 
+
+
             }
+
         }
         public override TranslationList DefaultTranslations
         {
@@ -48,43 +52,33 @@ namespace fr34kyn01535.RewardExtension
             }
         }
 
+
+
         private void Instance_OnPlayerVoted(UnturnedPlayer player, Votifier.ServiceDefinition definition)
+
+
 
 
         {
 
-            {
+
+            string XPReceived = Configuration.Instance.XP + "Sup";
+
+            player.Experience += Configuration.Instance.XP.Value;
+
+            UnturnedChat.Say(player, Instance.Translations.Instance.Translate("votifierxp_player_has_voted", definition.Name, XPReceived));
+            Logger.Log(player.DisplayName + " has received " + XPReceived + " because he voted on " + definition.Name);
 
 
-                string XPReceived = Configuration.Instance.XP + "Sup";
 
-                player.Experience += Configuration.Instance.XP.Value;
 
-                UnturnedChat.Say(player, Instance.Translations.Instance.Translate("votifierxp_player_has_voted", definition.Name, XPReceived));
-                Logger.Log(player.DisplayName + " has received " + XPReceived + " because he voted on " + definition.Name);
-            }
-            {
-                  RewardExtension.ExecuteDependencyCode("Uconomy", (IRocketPlugin plugin) =>
-                 
-                {
 
-                    string moneyReceived = Configuration.Instance.Money + Uconomy.Uconomy.Instance.Configuration.Instance.MoneyName;
-                    string newTotalMoney = Uconomy.Uconomy.Instance.Database.IncreaseBalance(player.Id, Configuration.Instance.Money) + Uconomy.Uconomy.Instance.Configuration.Instance.MoneyName;
+            string moneyReceived = Configuration.Instance.Money + Uconomy.Uconomy.Instance.Configuration.Instance.MoneyName;
+            string newTotalMoney = Uconomy.Uconomy.Instance.Database.IncreaseBalance(player.Id, Configuration.Instance.Money) + Uconomy.Uconomy.Instance.Configuration.Instance.MoneyName;
 
-                    UnturnedChat.Say(player, Instance.Translations.Instance.Translate("votifierxpuconomy_player_has_voted", definition.Name, moneyReceived, newTotalMoney));
-                    Logger.Log(player.DisplayName + " has received " + moneyReceived + " because he voted on " + definition.Name);
-                });
-
-            }
+            UnturnedChat.Say(player, Instance.Translations.Instance.Translate("votifierxpuconomy_player_has_voted", definition.Name, moneyReceived, newTotalMoney));
+            Logger.Log(player.DisplayName + " has received " + moneyReceived + " because he voted on " + definition.Name);
         }
+
     }
 }
-
-    
-
-             
-            
-
-
-
-                   
