@@ -33,8 +33,6 @@ namespace fr34kyn01535.RewardExtension
 
 
 
-
-
             }
 
         }
@@ -68,9 +66,12 @@ namespace fr34kyn01535.RewardExtension
 
             UnturnedChat.Say(player, Instance.Translations.Instance.Translate("votifierxp_player_has_voted", definition.Name, XPReceived));
             Logger.Log(player.DisplayName + " has received " + XPReceived + " because he voted on " + definition.Name);
+            {
 
+            }
 
-
+            { 
+   
 
 
             string moneyReceived = Configuration.Instance.Money + Uconomy.Uconomy.Instance.Configuration.Instance.MoneyName;
