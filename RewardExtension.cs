@@ -1,4 +1,4 @@
-using Rocket.Core.Logging;
+﻿using Rocket.Core.Logging;
 using Rocket.Core.Plugins;
 using Rocket.Unturned.Chat;
 using Rocket.Unturned.Player;
@@ -29,7 +29,9 @@ namespace fr34kyn01535.RewardExtension
                 Logger.Log("Optional dependency Uconomy is not present.");
             }
             {
-                Votifier.Votifier.Instance.OnPlayerVoted += Instance_OnPlayerVoted;
+                
+
+
 
 
 
@@ -43,35 +45,32 @@ namespace fr34kyn01535.RewardExtension
                 return new TranslationList()
                 {
                     { "votifierxp_player_has_voted","Thanks for voting on {0}, you have received {1}" } ,
-                       { "votifierxpuconomy_player_has_voted","Thanks for voting on {0}, you have received {1} and now have {2} in your balance." }
+                       { "votifierxpuconomy_player_has_voted","Thanks for voting on {0}, you have received {1} and now have {2} in your bank Account." }
 
 
                 };
             }
         }
-
-
-
+        private bool _registeredEvents;
+        private void Update()
+        {
+            if (_registeredEvents || Votifier.Votifier.Instance == null) return;
+            Votifier.Votifier.Instance.OnPlayerVoted += Instance_OnPlayerVoted;
+            _registeredEvents = true;
+        }
         private void Instance_OnPlayerVoted(UnturnedPlayer player, Votifier.ServiceDefinition definition)
-
-
-
-
         {
 
 
-            string XPReceived = Configuration.Instance.XP + "Sup";
+            string XPReceived = Configuration.Instance.XP + "XP";
 
             player.Experience += Configuration.Instance.XP.Value;
 
             UnturnedChat.Say(player, Instance.Translations.Instance.Translate("votifierxp_player_has_voted", definition.Name, XPReceived));
             Logger.Log(player.DisplayName + " has received " + XPReceived + " because he voted on " + definition.Name);
-            {
 
-            }
 
-            { 
-   
+
 
 
             string moneyReceived = Configuration.Instance.Money + Uconomy.Uconomy.Instance.Configuration.Instance.MoneyName;
